@@ -4,6 +4,36 @@
   box-sizing: border-box;
 }
 
+/* colors - bluelagoo
+#0052D4
+#4364F7
+#6FB1FC */
+
 html {
   font-family: "Poppins", sans-serif;
+}
+
+section {
+  background-color: #4364f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 800px;
+  width: 90%;
+
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
 }
