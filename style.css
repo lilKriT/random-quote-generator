@@ -31,9 +31,25 @@ section {
 
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
 h1 {
   text-align: center;
   font-size: 2.2rem;
+}
+
+.quote-area {
+  display: flex;
+  text-align: center;
+}
+
+.quote-area *:last-child {
+  align-self: flex-end;
+}
+
+.author {
+  align-self: flex-end;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
