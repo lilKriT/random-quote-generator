@@ -5,6 +5,8 @@ const newQuoteButton = document.querySelector("button#new-quote");
 const quote = document.querySelector("p.quote");
 const author = document.querySelector("span.author");
 
+const ttsButton = document.querySelector("#tts");
+
 const fetchQuote = async () => {
   newQuoteButton.textContent = "Waiting...";
   newQuoteButton.classList.add("inactive");
@@ -25,3 +27,12 @@ const fetchQuote = async () => {
 };
 
 newQuoteButton.addEventListener("click", fetchQuote);
+
+const readQuote = () => {
+  let utterance = new SpeechSynthesisUtterance(
+    `${quote.textContent} by ${author.textContent}`
+  );
+  speechSynthesis.speak(utterance);
+};
+
+ttsButton.addEventListener("click", readQuote);
