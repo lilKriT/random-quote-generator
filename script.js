@@ -6,6 +6,7 @@ const quote = document.querySelector("p.quote");
 const author = document.querySelector("span.author");
 
 const ttsButton = document.querySelector("#tts");
+const copyToClipboardButton = document.querySelector("#copy");
 
 const fetchQuote = async () => {
   newQuoteButton.textContent = "Waiting...";
@@ -36,3 +37,9 @@ const readQuote = () => {
 };
 
 ttsButton.addEventListener("click", readQuote);
+
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(quote.textContent);
+};
+
+copyToClipboardButton.addEventListener("click", copyToClipboard);
