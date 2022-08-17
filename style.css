@@ -52,4 +52,27 @@ h1 {
   align-self: flex-end;
   font-size: 1.6rem;
   font-weight: 600;
+  font-style: italic;
+}
+
+.features {
+  display: flex;
+  background-color: red;
+  justify-content: space-between;
+}
+
+.features ul {
+  display: flex;
+  list-style: none;
+}
+
+.features ul li {
+  width: 52px;
+  aspect-ratio: 1;
+  border: 2px solid #4364f7;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 }
