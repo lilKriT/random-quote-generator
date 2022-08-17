@@ -109,3 +109,7 @@ h1 {
   border: 2px solid #4364f7;
   transition: all 0.3s;
 }
+
+.features button.inactive {
+  background-color: #6fb1fc;
+}
