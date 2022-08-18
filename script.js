@@ -7,6 +7,7 @@ const author = document.querySelector("span.author");
 
 const ttsButton = document.querySelector("#tts");
 const copyToClipboardButton = document.querySelector("#copy");
+const twitterButton = document.querySelector("#twitter");
 
 const fetchQuote = async () => {
   newQuoteButton.textContent = "Waiting...";
@@ -26,6 +27,7 @@ const fetchQuote = async () => {
     console.log("Error", data);
   }
 };
+fetchQuote();
 
 newQuoteButton.addEventListener("click", fetchQuote);
 
@@ -43,3 +45,10 @@ const copyToClipboard = () => {
 };
 
 copyToClipboardButton.addEventListener("click", copyToClipboard);
+
+const postToTwitter = () => {
+  let tweetURL = `https://twitter.com/intent/tweet?url=${quote.textContent}`;
+  window.open(tweetURL, "_blank");
+};
+
+twitterButton.addEventListener("click", postToTwitter);
